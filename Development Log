@@ -1,3 +1,31 @@
-2022/4/28: [Zachary Fan]
-1. Try to use array to detect if the player is standing on the ground, but this method cannot detect if the player is standing at the edge of the platform.
-2. Change to use extra collider to detect if the player is standing on the ground. Fix the problem in (1). (Still searching for a better way to do this)
+///////////////////////////////////////////////////////////////////
+Format:
+Time: [Name] [Type]
+(Type) Description:
+(Development) Details:
+(Additional) Note:
+
+Name: [Zac](Zachary Fan), [Lulu](Ziming Zhu), [Kyle](Xinkai Shi), [All](all)
+Time: yyyy/mm/dd
+Type: [Bug] [Debug] [Code optimization] [Add features] [Add Art Resources] [Learn] [Other]
+///////////////////////////////////////////////////////////////////
+
+2022/04/16: [All] [Other]
+Description: Set up the project.
+Details: Start learning Unity.
+
+2022/04/17 - 2022/04/22: [All] [Learn]
+Description: Learn basic functions of Unity
+Details: Import animations, Player movement, Edit animator, Player attack, Enemy with AI and particle effects, Camera movements (Implemented with Scripts)
+         Player death, Edit layer and sorting layer, Tilemap, UI, Trap (Spikes), Moving/Oneway platform, Ladder, Item pickup, Light system, Floating Damage
+         
+2022/04/27: [Zachary Fan] [Add Art Resources]
+Description: Draw some pictures for early development
+Details: Draw a player with basic animations, ground. Use a picture from Internet as the background.
+Note: Use Aseprite
+
+2022/04/28: [Zachary Fan] [Debug]
+Description: The array method cannot detect if the player is standing at the edge of the platform.
+Details: Change to use extra collider to detect if the player is standing on the ground.
+Note: Still finding a better way to do this.
+
