@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider2D stoiCollider;
     private BoxCollider2D stoiFeetCollider;
     private Animator stoiAnimator;
-    public CinemachineVirtualCamera mainCamera;
 
     public float speed, jumpForce;
     public LayerMask ground;
@@ -42,6 +41,7 @@ public class PlayerController : MonoBehaviour
         stoiAnimator = GetComponent<Animator>();
         jumpPressed = false;
         lookTime = 0;
+        isLooking = false;
     }
 
     // Update is called once per frame
@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
         Jump();
 
         SwitchAnim();
+
+        Look();
     }
 
     private void FixedUpdate()
@@ -62,8 +64,6 @@ public class PlayerController : MonoBehaviour
         isGrounded = stoiFeetCollider.IsTouchingLayers(ground);
 
         Movement();
-
-        Look();
     }
 
     void Movement()
@@ -124,20 +124,12 @@ public class PlayerController : MonoBehaviour
         {
             if (lookTime < lookBufferTime)
             {
-                lookTime += Time.deltaTime;
+                lookTime += Time.fixedDeltaTime;
             }
             else if (!isLooking)
             {
-                if (verticalScale > 0)
-                {
-                    stoiAnimator.SetInteger("Look", 1);
-                    CameraController.LookUp(mainCamera);
-                }
-                else
-                {
-                    stoiAnimator.SetInteger("Look", -1);
-                    CameraController.LookDown(mainCamera);
-                }
+                int dir = verticalScale > 0 ? 1 : -1;
+                stoiAnimator.SetInteger("Look", dir);
                 isLooking = true;
             }
         }
@@ -145,7 +137,6 @@ public class PlayerController : MonoBehaviour
         {
             lookTime = 0;
             stoiAnimator.SetInteger("Look", 0);
-            CameraController.Reset(mainCamera);
             isLooking = false;
         }
     }

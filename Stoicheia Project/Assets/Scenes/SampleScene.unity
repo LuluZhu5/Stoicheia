@@ -218,8 +218,6 @@ GameObject:
   - component: {fileID: 333738389}
   - component: {fileID: 333738388}
   - component: {fileID: 333738390}
-  - component: {fileID: 333738392}
-  - component: {fileID: 333738391}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -296,33 +294,6 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1033094354}
   m_Damping: 0.5
   m_MaxWindowSize: -1
---- !u!114 &333738391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333738387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9b4b0b9b7747b4ba4d3e052b3cbd12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &333738392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333738387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_ApplyAfter: 1
-  m_PreserveComposition: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,7 +1953,7 @@ GameObject:
   - component: {fileID: 1111689039}
   - component: {fileID: 1111689040}
   m_Layer: 0
-  m_Name: cm
+  m_Name: Body Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1995,8 +1966,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111689038}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.56, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2137,14 +2108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd1806fb8c3dff4db1fede57ba01ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 333738388}
   speed: 7
   jumpForce: 14
   ground:
     serializedVersion: 2
     m_Bits: 128
   maxJumpCount: 2
-  lookBufferTime: 0.7
+  lookBufferTime: 2
 --- !u!70 &1170187150
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
