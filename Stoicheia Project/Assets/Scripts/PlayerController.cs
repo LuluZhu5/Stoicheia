@@ -15,42 +15,50 @@ public class PlayerController : MonoBehaviour
     //}
     
     private Rigidbody2D stoiRigidbody;
-    private CapsuleCollider2D stoiCollider;
-    private BoxCollider2D stoiFeetCollider;
     private Animator stoiAnimator;
 
-    public float speed, jumpForce;
-    public LayerMask ground;
+    [Header("Environment")]
+    public float footOffset;
+    public float bodyOffset;
+    public float groundDistance;
+    public LayerMask groundLayer;
 
-    private bool isGrounded;
+    [Header("Movement")]
+    public float speed;
 
-    private bool jumpPressed;
-    private int jumpCount;
-    public int maxJumpCount;
+    [Header("Jump")]
+    public float jumpForce;
+    public float jumpHoldForce;
+    public float jumpHoldDuration;
+    private float jumpTime;
 
+    public float secondJumpForce;
+
+    [Header("Look")]
     public float lookBufferTime;
     private float lookTime;
-    private bool isLooking;
+
+    [Header("State")]
+    public bool isGrounded;
+    public bool isLooking;
+   
+    //Button Controllers
+    private bool jumpPressed;
+    private bool jumpHeld;
 
     // Start is called before the first frame update
     private void Start()
     {
         stoiRigidbody = GetComponent<Rigidbody2D>();
-        stoiCollider = GetComponent<CapsuleCollider2D>();
-        stoiFeetCollider = GetComponent <BoxCollider2D>();
+
         stoiAnimator = GetComponent<Animator>();
-        jumpPressed = false;
-        lookTime = 0;
-        isLooking = false;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && jumpCount > 0)
-        {
-            jumpPressed = true;
-        }
+        jumpPressed = Input.GetButtonDown("Jump");
+        jumpHeld = Input.GetButton("Jump");
 
         Jump();
 
@@ -61,9 +69,17 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = stoiFeetCollider.IsTouchingLayers(ground);
+        PhysicsCheck();
 
         Movement();
+    }
+
+    void PhysicsCheck()
+    {
+        //Ground Check
+        RaycastHit2D leftCheck = Raycast(new Vector2(-footOffset, bodyOffset), Vector2.down, groundDistance, groundLayer);
+        RaycastHit2D rightCheck = Raycast(new Vector2(footOffset, bodyOffset), Vector2.down, groundDistance, groundLayer);
+        isGrounded = leftCheck || rightCheck;
     }
 
     void Movement()
@@ -79,20 +95,19 @@ public class PlayerController : MonoBehaviour
 
     void Jump ()
     {
-        if (isGrounded)
+        if (jumpPressed && isGrounded) // First Jump
         {
-            jumpCount = maxJumpCount - 1;
-        }
-        if (jumpPressed && isGrounded) // First Jump (from ground)
-        {
-            stoiRigidbody.velocity = new Vector2(stoiRigidbody.velocity.x, jumpForce);
-            --jumpCount;
+            jumpTime = Time.time + jumpHoldDuration;
+            stoiRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumpPressed = false;
         }
-        else if (jumpPressed && jumpCount > 0 && !isGrounded) // Additional Jump (from Air)
+        if (jumpHeld && !isGrounded && Time.time < jumpTime) // Still Jumping
         {
-            stoiRigidbody.velocity = new Vector2(stoiRigidbody.velocity.x, jumpForce);
-            --jumpCount;
+            stoiRigidbody.AddForce(new Vector2(0f, jumpHoldForce), ForceMode2D.Force);
+        }
+        if (jumpPressed && !isGrounded) // Second jump
+        {
+            stoiRigidbody.AddForce(new Vector2(0f, secondJumpForce), ForceMode2D.Impulse);
             jumpPressed = false;
         }
     }
@@ -139,5 +154,14 @@ public class PlayerController : MonoBehaviour
             stoiAnimator.SetInteger("Look", 0);
             isLooking = false;
         }
+    }
+
+    RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length, LayerMask Layer)
+    {
+        Vector2 pos = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(pos + offset, rayDirection, length, Layer);
+        Color color = hit ? Color.red : Color.green;
+        Debug.DrawRay(pos + offset, rayDirection * length, color);
+        return hit;
     }
 }
