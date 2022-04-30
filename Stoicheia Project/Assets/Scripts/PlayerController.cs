@@ -5,10 +5,20 @@ using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
+    //private PlayerController() { }
+    //public static PlayerController instance { get { return Nested.instance} }
+
+    //class Nested
+    //{ 
+    //    static Nested() { }
+    //    internal static readonly PlayerController instance = new PlayerController();
+    //}
+    
     private Rigidbody2D stoiRigidbody;
     private CapsuleCollider2D stoiCollider;
     private BoxCollider2D stoiFeetCollider;
     private Animator stoiAnimator;
+    public CinemachineVirtualCamera mainCamera;
 
     public float speed, jumpForce;
     public LayerMask ground;
@@ -21,9 +31,10 @@ public class PlayerController : MonoBehaviour
 
     public float lookBufferTime;
     private float lookTime;
+    private bool isLooking;
 
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
         stoiRigidbody = GetComponent<Rigidbody2D>();
         stoiCollider = GetComponent<CapsuleCollider2D>();
@@ -34,7 +45,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetButtonDown("Jump") && jumpCount > 0)
         {
@@ -44,38 +55,15 @@ public class PlayerController : MonoBehaviour
         Jump();
 
         SwitchAnim();
-
-        
     }
 
     private void FixedUpdate()
     {
-        Debug.Log(lookTime);
-
         isGrounded = stoiFeetCollider.IsTouchingLayers(ground);
 
         Movement();
 
-        if (isGrounded && Mathf.Abs(stoiRigidbody.velocity.x) < Mathf.Epsilon)
-        {
-            float verticalScale = Input.GetAxisRaw("Vertical");
-            if (verticalScale == 0)
-            {
-                lookTime = 0;
-                stoiAnimator.SetInteger("Look", 0);
-            }
-            else
-            {
-                if (lookTime < lookBufferTime)
-                {
-                    lookTime += Time.deltaTime;
-                }
-                else
-                {
-                    stoiAnimator.SetInteger("Look", verticalScale > 0 ? 1 : -1);
-                }
-            }
-        }
+        Look();
     }
 
     void Movement()
@@ -131,6 +119,34 @@ public class PlayerController : MonoBehaviour
 
     void Look()
     {
-        
+        float verticalScale = Input.GetAxisRaw("Vertical");
+        if (verticalScale != 0 && isGrounded && Mathf.Abs(stoiRigidbody.velocity.x) < Mathf.Epsilon)
+        {
+            if (lookTime < lookBufferTime)
+            {
+                lookTime += Time.deltaTime;
+            }
+            else if (!isLooking)
+            {
+                if (verticalScale > 0)
+                {
+                    stoiAnimator.SetInteger("Look", 1);
+                    CameraController.LookUp(mainCamera);
+                }
+                else
+                {
+                    stoiAnimator.SetInteger("Look", -1);
+                    CameraController.LookDown(mainCamera);
+                }
+                isLooking = true;
+            }
+        }
+        else
+        {
+            lookTime = 0;
+            stoiAnimator.SetInteger("Look", 0);
+            CameraController.Reset(mainCamera);
+            isLooking = false;
+        }
     }
 }

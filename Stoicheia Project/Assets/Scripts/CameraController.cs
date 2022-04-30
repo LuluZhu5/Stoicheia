@@ -5,20 +5,23 @@ using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
-    static CinemachineFramingTransposer transposer;
-
-    private void Awake()
+    public static void Reset(CinemachineVirtualCamera cam)
     {
-        transposer = GetComponent<CinemachineFramingTransposer>();
+        CinemachineCameraOffset offset = cam.GetComponent<CinemachineCameraOffset>();
+        Vector3 targetPos = new Vector3(0f, 0f, 0f);
+        offset.m_Offset = Vector3.Lerp(offset.m_Offset, targetPos, 0.1f);
+    }
+    public static void LookUp(CinemachineVirtualCamera cam)
+    {
+        CinemachineCameraOffset offset = cam.GetComponent<CinemachineCameraOffset>();
+        Vector3 targetPos = new Vector3(0f, 7.0f, 0f);
+        offset.m_Offset = Vector3.Lerp(offset.m_Offset, targetPos, 0.1f);
     }
 
-    public static void MoveUp()
+    public static void LookDown(CinemachineVirtualCamera cam)
     {
-        transposer.m_ScreenX = 0.7f;
-    }
-
-    public static void MoveDown()
-    {
-        transposer.m_ScreenX = 0.3f;
+        CinemachineCameraOffset offset = cam.GetComponent<CinemachineCameraOffset>();
+        Vector3 targetPos = new Vector3(0f, -7.0f, 0f);
+        offset.m_Offset = Vector3.Lerp(offset.m_Offset, targetPos, 0.1f);
     }
 }
