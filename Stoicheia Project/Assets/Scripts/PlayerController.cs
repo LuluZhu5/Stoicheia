@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     
     private Rigidbody2D stoiRigidbody;
     private Animator stoiAnimator;
+    public CinemachineVirtualCamera mainCamera;
 
     [Header("Environment")]
     public float footOffset;
@@ -52,6 +53,11 @@ public class PlayerController : MonoBehaviour
         stoiRigidbody = GetComponent<Rigidbody2D>();
 
         stoiAnimator = GetComponent<Animator>();
+<<<<<<< HEAD
+=======
+        jumpPressed = false;
+        lookTime = 0;
+>>>>>>> parent of eac669e (Remove codes from Cinemachine)
     }
 
     // Update is called once per frame
@@ -63,8 +69,6 @@ public class PlayerController : MonoBehaviour
         Jump();
 
         SwitchAnim();
-
-        Look();
     }
 
     private void FixedUpdate()
@@ -72,6 +76,8 @@ public class PlayerController : MonoBehaviour
         PhysicsCheck();
 
         Movement();
+
+        Look();
     }
 
     void PhysicsCheck()
@@ -139,12 +145,20 @@ public class PlayerController : MonoBehaviour
         {
             if (lookTime < lookBufferTime)
             {
-                lookTime += Time.fixedDeltaTime;
+                lookTime += Time.deltaTime;
             }
             else if (!isLooking)
             {
-                int dir = verticalScale > 0 ? 1 : -1;
-                stoiAnimator.SetInteger("Look", dir);
+                if (verticalScale > 0)
+                {
+                    stoiAnimator.SetInteger("Look", 1);
+                    CameraController.LookUp(mainCamera);
+                }
+                else
+                {
+                    stoiAnimator.SetInteger("Look", -1);
+                    CameraController.LookDown(mainCamera);
+                }
                 isLooking = true;
             }
         }
@@ -152,6 +166,7 @@ public class PlayerController : MonoBehaviour
         {
             lookTime = 0;
             stoiAnimator.SetInteger("Look", 0);
+            CameraController.Reset(mainCamera);
             isLooking = false;
         }
     }
