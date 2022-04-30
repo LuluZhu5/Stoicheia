@@ -116,11 +116,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stoi_Sheet_21
+      name: Stoi_Sheet_0
       rect:
         serializedVersion: 2
-        x: 384
-        y: 48
+        x: 0
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -158,10 +158,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_8
+      name: Stoi_Sheet_2
       rect:
         serializedVersion: 2
-        x: 384
+        x: 96
         y: 96
         width: 48
         height: 48
@@ -174,69 +174,6 @@ TextureImporter:
       bones: []
       spriteID: 39176bcee7398fe45bf468a7324b043d
       internalID: -771601949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6555068ad815adc4c93f1290e61c793b
-      internalID: -1800673471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a49942da2adcda342acc63359b5acd39
-      internalID: -1483846173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 742c8a8b49426b54cb7d8f1d23ef02f4
-      internalID: 1468466369
       vertices: []
       indices: 
       edges: []
@@ -256,6 +193,69 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+      spriteID: 6555068ad815adc4c93f1290e61c793b
+      internalID: -1800673471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49942da2adcda342acc63359b5acd39
+      internalID: -1483846173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742c8a8b49426b54cb7d8f1d23ef02f4
+      internalID: 1468466369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
       spriteID: 2ab79de91b8f05a45937f7c89bfc9da4
       internalID: -374125077
       vertices: []
@@ -263,11 +263,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_31
+      name: Stoi_Sheet_7
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
+        x: 336
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -284,11 +284,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_23
+      name: Stoi_Sheet_8
       rect:
         serializedVersion: 2
-        x: 480
-        y: 48
+        x: 384
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -305,11 +305,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_20
+      name: Stoi_Sheet_9
       rect:
         serializedVersion: 2
-        x: 336
-        y: 48
+        x: 432
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -326,10 +326,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_9
+      name: Stoi_Sheet_10
       rect:
         serializedVersion: 2
-        x: 432
+        x: 480
         y: 96
         width: 48
         height: 48
@@ -368,11 +368,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_22
+      name: Stoi_Sheet_12
       rect:
         serializedVersion: 2
-        x: 432
-        y: 48
+        x: 576
+        y: 96
         width: 48
         height: 48
       alignment: 0
@@ -389,11 +389,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_5
+      name: Stoi_Sheet_13
       rect:
         serializedVersion: 2
-        x: 240
-        y: 96
+        x: 0
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -405,195 +405,6 @@ TextureImporter:
       bones: []
       spriteID: 05e93ba2ad6aacf4d9a1eb2b14cce861
       internalID: -1438332782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6361efce4c1ac954c86ca94aad215ced
-      internalID: 953460604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 642b2cce3d247c74597d2f8037fdf0ee
-      internalID: 929746639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_35
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6203d789f5128a84e88db70b46a1050a
-      internalID: 1987643315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 428954231147eca4891e91d91836ac50
-      internalID: 7536708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_26
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fa85c9d02af99c45af5ed1e5c52238d
-      internalID: -469170157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ee7782ed6297d1478e892c16cab0360
-      internalID: -1287975172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_29
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9908b1439f404d47bed62e15bc6e601
-      internalID: 1526661338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ef01ecbb425e3a418ce41e8866e163e
-      internalID: 579019270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 460e766a5f09fe74aa1859ce659fb4f4
-      internalID: -696956595
       vertices: []
       indices: 
       edges: []
@@ -613,18 +424,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 224e8e922c10e79468a57e8b31b37f13
-      internalID: -1364189931
+      spriteID: 6361efce4c1ac954c86ca94aad215ced
+      internalID: 953460604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_34
+      name: Stoi_Sheet_15
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 96
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -634,71 +445,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 282fc9efd0654514fa37bd1d4ab31ace
-      internalID: -615661808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_27
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f713d62bb6d41514991cde3185e9f41e
-      internalID: 1517674357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_36
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35d08e635b5e0fe4b832001df321a5a1
-      internalID: -1805730078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8882cd51cb37934ba6fb625233b9f94
-      internalID: 2137104146
+      spriteID: 642b2cce3d247c74597d2f8037fdf0ee
+      internalID: 929746639
       vertices: []
       indices: 
       edges: []
@@ -718,18 +466,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 338ba10a302f4f6439c164d8159a9f96
-      internalID: -868528262
+      spriteID: 6203d789f5128a84e88db70b46a1050a
+      internalID: 1987643315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_2
+      name: Stoi_Sheet_17
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 192
+        y: 48
         width: 48
         height: 48
       alignment: 0
@@ -739,29 +487,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc2fb456200c0c4184404f93c8954b1
-      internalID: -2099256105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stoi_Sheet_32
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0ed333f92b562547bda6f17e7a11142
-      internalID: -1436096208
+      spriteID: 428954231147eca4891e91d91836ac50
+      internalID: 7536708
       vertices: []
       indices: 
       edges: []
@@ -781,17 +508,164 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65cbc55887f0d3c4f823efe59974f9b0
-      internalID: 942909428
+      spriteID: 3fa85c9d02af99c45af5ed1e5c52238d
+      internalID: -469170157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_30
+      name: Stoi_Sheet_19
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee7782ed6297d1478e892c16cab0360
+      internalID: -1287975172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9908b1439f404d47bed62e15bc6e601
+      internalID: 1526661338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef01ecbb425e3a418ce41e8866e163e
+      internalID: 579019270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460e766a5f09fe74aa1859ce659fb4f4
+      internalID: -696956595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224e8e922c10e79468a57e8b31b37f13
+      internalID: -1364189931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282fc9efd0654514fa37bd1d4ab31ace
+      internalID: -615661808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f713d62bb6d41514991cde3185e9f41e
+      internalID: 1517674357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 48
         height: 48
@@ -802,8 +676,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3cd02ae7cf03844ea4b1b5159639e41
-      internalID: 1942921559
+      spriteID: 35d08e635b5e0fe4b832001df321a5a1
+      internalID: -1805730078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8882cd51cb37934ba6fb625233b9f94
+      internalID: 2137104146
       vertices: []
       indices: 
       edges: []
@@ -823,6 +718,111 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+      spriteID: 338ba10a302f4f6439c164d8159a9f96
+      internalID: -868528262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc2fb456200c0c4184404f93c8954b1
+      internalID: -2099256105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ed333f92b562547bda6f17e7a11142
+      internalID: -1436096208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cbc55887f0d3c4f823efe59974f9b0
+      internalID: 942909428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cd02ae7cf03844ea4b1b5159639e41
+      internalID: 1942921559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stoi_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
       spriteID: 306adfd3223fb4645a813d12925ad822
       internalID: 371223997
       vertices: []
@@ -830,10 +830,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_38
+      name: Stoi_Sheet_34
       rect:
         serializedVersion: 2
-        x: 576
+        x: 384
         y: 0
         width: 48
         height: 48
@@ -851,11 +851,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_4
+      name: Stoi_Sheet_35
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
+        x: 432
+        y: 0
         width: 48
         height: 48
       alignment: 0
@@ -872,11 +872,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_24
+      name: Stoi_Sheet_36
       rect:
         serializedVersion: 2
-        x: 528
-        y: 48
+        x: 480
+        y: 0
         width: 48
         height: 48
       alignment: 0
@@ -914,10 +914,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stoi_Sheet_33
+      name: Stoi_Sheet_38
       rect:
         serializedVersion: 2
-        x: 336
+        x: 576
         y: 0
         width: 48
         height: 48
@@ -945,45 +945,45 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Stoi_Sheet_14: -1364189931
+      Stoi_Sheet_14: 953460604
       Stoi_Sheet_11: -462297138
-      Stoi_Sheet_13: -1800673471
-      Stoi_Sheet_2: -2099256105
-      Stoi_Sheet_34: -615661808
-      Stoi_Sheet_23: 1679650414
-      Stoi_Sheet_29: 1526661338
-      Stoi_Sheet_38: 1338195736
-      Stoi_Sheet_5: -1438332782
-      Stoi_Sheet_27: 1517674357
-      Stoi_Sheet_25: 579019270
+      Stoi_Sheet_13: -1438332782
+      Stoi_Sheet_2: -771601949
+      Stoi_Sheet_34: 1338195736
+      Stoi_Sheet_23: -1364189931
+      Stoi_Sheet_29: -2099256105
+      Stoi_Sheet_38: -1294646544
+      Stoi_Sheet_5: 1468466369
+      Stoi_Sheet_27: 2137104146
+      Stoi_Sheet_25: 1517674357
       Stoi_Sheet_1: -1819568065
-      Stoi_Sheet_17: -696956595
-      Stoi_Sheet_8: -771601949
-      Stoi_Sheet_21: -35325731
-      Stoi_Sheet_30: 1942921559
-      Stoi_Sheet_36: -1805730078
-      Stoi_Sheet_22: -1738283513
-      Stoi_Sheet_28: 371223997
-      Stoi_Sheet_32: -1436096208
-      Stoi_Sheet_6: 2137104146
-      Stoi_Sheet_10: 953460604
-      Stoi_Sheet_12: 7536708
-      Stoi_Sheet_0: 1468466369
-      Stoi_Sheet_4: 1885001743
-      Stoi_Sheet_9: -205930406
-      Stoi_Sheet_16: -868528262
-      Stoi_Sheet_20: 1082467216
-      Stoi_Sheet_26: -469170157
-      Stoi_Sheet_3: -374125077
-      Stoi_Sheet_19: 929746639
-      Stoi_Sheet_33: -1294646544
-      Stoi_Sheet_15: -1287975172
-      Stoi_Sheet_18: 942909428
-      Stoi_Sheet_7: -1483846173
-      Stoi_Sheet_24: 1836674333
-      Stoi_Sheet_35: 1987643315
+      Stoi_Sheet_17: 7536708
+      Stoi_Sheet_8: 1679650414
+      Stoi_Sheet_21: 579019270
+      Stoi_Sheet_30: -1436096208
+      Stoi_Sheet_36: 1836674333
+      Stoi_Sheet_22: -696956595
+      Stoi_Sheet_28: -868528262
+      Stoi_Sheet_32: 1942921559
+      Stoi_Sheet_6: -374125077
+      Stoi_Sheet_10: -205930406
+      Stoi_Sheet_12: -1738283513
+      Stoi_Sheet_0: -35325731
+      Stoi_Sheet_4: -1483846173
+      Stoi_Sheet_9: 1082467216
+      Stoi_Sheet_16: 1987643315
+      Stoi_Sheet_20: 1526661338
+      Stoi_Sheet_26: -1805730078
+      Stoi_Sheet_3: -1800673471
+      Stoi_Sheet_19: -1287975172
+      Stoi_Sheet_33: 371223997
+      Stoi_Sheet_15: 929746639
+      Stoi_Sheet_18: -469170157
+      Stoi_Sheet_7: -245333227
+      Stoi_Sheet_24: -615661808
+      Stoi_Sheet_35: 1885001743
       Stoi_Sheet_37: 1400715518
-      Stoi_Sheet_31: -245333227
+      Stoi_Sheet_31: 942909428
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public bool isLooking;
    
-    //Button Detectors
+    //Button Controllers
     private bool jumpPressed;
     private bool jumpHeld;
 
@@ -51,9 +51,13 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         stoiRigidbody = GetComponent<Rigidbody2D>();
+
         stoiAnimator = GetComponent<Animator>();
+<<<<<<< HEAD
+=======
         jumpPressed = false;
         lookTime = 0;
+>>>>>>> parent of eac669e (Remove codes from Cinemachine)
     }
 
     // Update is called once per frame
@@ -72,11 +76,16 @@ public class PlayerController : MonoBehaviour
         PhysicsCheck();
 
         Movement();
+
+        Look();
     }
 
     void PhysicsCheck()
     {
-
+        //Ground Check
+        RaycastHit2D leftCheck = Raycast(new Vector2(-footOffset, bodyOffset), Vector2.down, groundDistance, groundLayer);
+        RaycastHit2D rightCheck = Raycast(new Vector2(footOffset, bodyOffset), Vector2.down, groundDistance, groundLayer);
+        isGrounded = leftCheck || rightCheck;
     }
 
     void Movement()
@@ -143,10 +152,12 @@ public class PlayerController : MonoBehaviour
                 if (verticalScale > 0)
                 {
                     stoiAnimator.SetInteger("Look", 1);
+                    CameraController.LookUp(mainCamera);
                 }
                 else
                 {
                     stoiAnimator.SetInteger("Look", -1);
+                    CameraController.LookDown(mainCamera);
                 }
                 isLooking = true;
             }
@@ -155,6 +166,7 @@ public class PlayerController : MonoBehaviour
         {
             lookTime = 0;
             stoiAnimator.SetInteger("Look", 0);
+            CameraController.Reset(mainCamera);
             isLooking = false;
         }
     }
