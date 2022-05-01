@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+[System.Serializable]
 public class PlayerController : MonoBehaviour
 {
-    //private PlayerController() { }
-    //public static PlayerController instance { get { return Nested.instance} }
+    //private PlayerMovement() { }
+    //public static PlayerMovement instance { get { return Nested.instance} }
 
     //class Nested
     //{ 
     //    static Nested() { }
-    //    internal static readonly PlayerController instance = new PlayerController();
+    //    internal static readonly PlayerMovement instance = new PlayerMovement();
     //}
     
     private Rigidbody2D rb;
-    private Animator anim;
 
     [Header("Environment")]
     public float footOffset;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
 
     [Header("Movement")]
-    public float speed;
+    [Range(0, 30)] public float speed;
 
     [Header("Jump")]
     public float jumpForce;
@@ -35,14 +35,22 @@ public class PlayerController : MonoBehaviour
     public int jumpMaxCount = 2;
     private int jumpCount;
 
+    [Header("Jump Optimization")]
+    [Range(1, 20)] public float highFallMutiplier;
+    [Range(1, 20)] public float lowFallMutiplier;
+
     [Header("Look")]
     public float lookBufferTime;
-    private float lookTime;
+    //private float lookTime;
+
+    [Header("Crouch")]
+    public float crouchSpeedDivisor;
 
     [Header("State")]
     public bool isGrounded;
     public bool isJumping;
     public bool isLooking;
+    public bool isCrouching;
 
     //Button Detectors
     private float horizontalInput;
@@ -52,11 +60,10 @@ public class PlayerController : MonoBehaviour
     private bool jumpReleased;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-    }
+}
 
     // Update is called once per frame
     private void Update()
@@ -65,21 +72,26 @@ public class PlayerController : MonoBehaviour
         jumpHeld = Input.GetButton("Jump");
         jumpReleased = Input.GetButtonUp("Jump");
 
+        verticalInput = Input.GetAxisRaw("Vertical");
+
         Jump();
 
         DoubleJump();
 
-        SwitchAnim();
+        JumpAdjustment();
 
-        Look();
+        Crouch();
+
+        //SwitchAnim();
+
+        //Look();
     }
 
     private void FixedUpdate()
     {
         PhysicsCheck();
-
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        
+        horizontalInput = Input.GetAxis("Horizontal");
 
         Movement();
     }
@@ -93,11 +105,16 @@ public class PlayerController : MonoBehaviour
 
     void Movement()
     {
+        if (isCrouching)
+        {
+            horizontalInput /= crouchSpeedDivisor;
+        }
+
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
 
         if (horizontalInput != 0)
         {
-            transform.localScale = new Vector3(horizontalInput, 1, 1);
+            transform.localScale = new Vector3(horizontalInput > 0 ? 1 : -1, 1, 1);
         }
     }
 
@@ -148,54 +165,58 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SwitchAnim()
+    void JumpAdjustment()
     {
-        anim.SetFloat("Run", Mathf.Abs(rb.velocity.x));
-
-        if (isGrounded)
+        if (rb.velocity.y < 0)
         {
-            anim.SetBool("Fall", false);
-            anim.SetBool("Jump", false);
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (highFallMutiplier - 1) * Time.deltaTime;
         }
-        else if (!isGrounded && rb.velocity.y > 0.1f)
+        else if (rb.velocity.y > 0 && !jumpHeld)
         {
-            anim.SetBool("Jump", true);
-        }
-        else if (rb.velocity.y < -0.1f)
-        {
-            anim.SetBool("Jump", false);
-            anim.SetBool("Fall", true);
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowFallMutiplier - 1) * Time.deltaTime;
         }
     }
 
-    void Look()
+    void Crouch()
     {
-        if (verticalInput != 0 && isGrounded && Mathf.Abs(rb.velocity.x) < 0.1f)
+        if (isGrounded && verticalInput < 0)
         {
-            if (lookTime < lookBufferTime)
-            {
-                lookTime += Time.deltaTime;
-            }
-            else if (!isLooking)
-            {
-                if (verticalInput > 0)
-                {
-                    anim.SetInteger("Look", 1);
-                }
-                else
-                {
-                    anim.SetInteger("Look", -1);
-                }
-                isLooking = true;
-            }
+            isCrouching = true;
         }
-        else
+        else if (isGrounded && verticalInput == 0)
         {
-            lookTime = 0;
-            anim.SetInteger("Look", 0);
-            isLooking = false;
+            isCrouching = false;
         }
     }
+
+    //void Look()
+    //{
+    //    if (verticalInput != 0 && isGrounded && Mathf.Abs(rb.velocity.x) < Mathf.Epsilon)
+    //    {
+    //        if (lookTime < lookBufferTime)
+    //        {
+    //            lookTime += Time.deltaTime;
+    //        }
+    //        else if (!isLooking)
+    //        {
+    //            if (verticalInput > 0)
+    //            {
+    //                anim.SetInteger("Look", 1);
+    //            }
+    //            else
+    //            {
+    //                anim.SetInteger("Look", -1);
+    //            }
+    //            isLooking = true;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        lookTime = 0;
+    //        anim.SetInteger("Look", 0);
+    //        isLooking = false;
+    //    }
+    //}
 
     RaycastHit2D Raycast(Vector2 offset, Vector2 rayDirection, float length, LayerMask Layer)
     {
