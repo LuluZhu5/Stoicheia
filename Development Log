@@ -40,3 +40,9 @@ Note: Change the log on 04/28
 
 2022/04/30: [Zachary Fan] [Other]
 Details: Mess up the Project when trying to reset the version. Reimport the whole project.
+
+2022/04/30： [Zachary Fan] [Learn] [Code Optimization] [Add features] [Add art resources]
+Description: Use new PlayerSheet. Implement crouch. Optimize Jump. Use Raycast to detect ground.
+Details: Use simpler art resources for future development. Use Blend tree and some Jump Optimization to simple and improve Jump behaviors.
+         Add Crouch to PlayerController.
+Note: Since I reimported the whole project, some functions that were reimplemented may be different from before.
