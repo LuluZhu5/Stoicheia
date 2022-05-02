@@ -7,7 +7,7 @@ Time: [Name] [Type]
 
 Name: [Zac](Zachary Fan), [Lulu](Ziming Zhu), [Kyle](Xinkai Shi), [All](all)
 Time: yyyy/mm/dd
-Type: [Bug] [Debug] [Code optimization] [Add Features] [Add Art Resources] [Learn] [Other]
+Type: [Bug] [Debug] [Code optimization] [Add Codes] [Add Features] [Add Art Resources] [Learn] [Other]
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 2022/04/16: [All] [Other]
@@ -41,8 +41,14 @@ Note: Change the log on 04/28
 2022/04/30: [Zachary Fan] [Other]
 Details: Mess up the Project when trying to reset the version. Reimport the whole project.
 
-2022/04/30： [Zachary Fan] [Learn] [Code Optimization] [Add features] [Add art resources]
+2022/04/30： [Zachary Fan] [Learn] [Add art resources] [Code Optimization] [Add features] 
 Description: Use new PlayerSheet. Implement crouch. Optimize Jump. Use Raycast to detect ground.
-Details: Use simpler art resources for future development. Use Blend tree and some Jump Optimization to simple and improve Jump behaviors.
+Details: Use simpler art resources for future development. Use some Jump Optimization to improve Jump. Use Blend tree to simple the animation logic.
          Add Crouch to PlayerController.
 Note: Since I reimported the whole project, some functions that were reimplemented may be different from before.
+
+2022/05/01：[Zachary Fan] [Debug] [Add Codes]
+Description: Complete jump and fall animation. Debug Jump() in PlayerController.
+Details: Use sub-state to implement hit ground animation. Fix the bug: holding the jump button will cause continuous jump animation when landed. 
+         (Change the condition from jumpReleased to !jumpHeld)
+Note: Change the log on 04/30
