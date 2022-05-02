@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     private bool jumpPressed;
     private bool jumpHeld;
-    private bool jumpReleased;
 
     // Start is called before the first frame update
     private void Awake()
@@ -70,7 +69,6 @@ public class PlayerController : MonoBehaviour
     {
         jumpPressed = Input.GetButtonDown("Jump");
         jumpHeld = Input.GetButton("Jump");
-        jumpReleased = Input.GetButtonUp("Jump");
 
         verticalInput = Input.GetAxisRaw("Vertical");
 
@@ -147,7 +145,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (jumpReleased)
+        if (!jumpHeld)
         {
             isJumping = false;
         }

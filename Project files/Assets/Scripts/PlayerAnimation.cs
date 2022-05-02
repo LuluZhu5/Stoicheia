@@ -8,10 +8,12 @@ public class PlayerAnimation : MonoBehaviour
     private PlayerController controller;
     private Rigidbody2D rb;
 
-    int speedID;
+    int xVelocityID;
     int groundID;
     int crouchID;
-    int verticalID;
+    int jumpID;
+    int yInputID;
+    int yVelocityID;
 
     private void Awake()
     {
@@ -19,17 +21,25 @@ public class PlayerAnimation : MonoBehaviour
         controller = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
 
-        speedID = Animator.StringToHash("speed");
+        xVelocityID = Animator.StringToHash("horizontalVelocity");
         groundID = Animator.StringToHash("isGrounded");
         crouchID = Animator.StringToHash("isCrouching");
-        verticalID = Animator.StringToHash("verticalInput");
+        jumpID = Animator.StringToHash("isJumping");
+        yInputID = Animator.StringToHash("verticalInput");
+        yVelocityID = Animator.StringToHash("verticalVelocity");
     }
 
     private void Update()
     {
-        anim.SetFloat(speedID, Mathf.Abs(rb.velocity.x));
-        anim.SetBool(groundID, controller.isGrounded);
         anim.SetBool(crouchID, controller.isCrouching);
-        anim.SetFloat(verticalID, -Input.GetAxis("Vertical"));
+        anim.SetBool(jumpID, controller.isJumping);
+        anim.SetFloat(yInputID, -Input.GetAxis("Vertical"));
+    }
+
+    private void FixedUpdate()
+    {
+        anim.SetBool(groundID, controller.isGrounded);
+        anim.SetFloat(xVelocityID, Mathf.Abs(rb.velocity.x));
+        anim.SetFloat(yVelocityID, rb.velocity.y);
     }
 }
