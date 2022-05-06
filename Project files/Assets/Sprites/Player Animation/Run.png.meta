@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 946390f9ff7e3c14289b855fc7396b8e
+guid: 2ceb2a644d4000f4e8d5ed1836fe1f6b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,101 +116,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubbles_0
+      name: Run_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -6, y: -6}
-        - {x: -6, y: 6}
-        - {x: 6, y: 6}
-        - {x: 6, y: -6}
+      - - {x: -16, y: -16}
+        - {x: -16, y: 7}
+        - {x: 8, y: 7}
+        - {x: 8, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 9a8bc972a069a9146af4b8fe84db04f9
-      internalID: -821199111
+      spriteID: 2598ff7ff3861be4c8ab34d425bed9ab
+      internalID: -55803477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -6, y: -6}
-        - {x: -6, y: 6}
-        - {x: 6, y: 6}
-        - {x: 6, y: -6}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5797c361a74ac374585e28347d4d82c7
-      internalID: -602467115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubbles_2
+      name: Run_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -6, y: -6}
-        - {x: -6, y: 6}
-        - {x: 6, y: 6}
-        - {x: 6, y: -6}
+      - - {x: -16, y: -16}
+        - {x: -16, y: 7}
+        - {x: 8, y: 7}
+        - {x: 8, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 18d2a235325ee7d4093dcd7a686444ec
-      internalID: 896765320
+      spriteID: 76b3a7d6e2e2e4e459b07e204ec41cae
+      internalID: -733334448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_3
+      name: Run_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -6, y: -6}
-        - {x: -6, y: 6}
-        - {x: 6, y: 6}
-        - {x: 6, y: -6}
+      - - {x: -16, y: -16}
+        - {x: -16, y: 7}
+        - {x: 8, y: 7}
+        - {x: 8, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 968129271977c454b80d8a3a7d743192
-      internalID: -433339740
+      spriteID: 66ab7dae5be1d964c9761e127fae3ae6
+      internalID: 641044880
       vertices: []
       indices: 
       edges: []
@@ -226,10 +201,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bubbles_1: -602467115
-      Bubbles_2: 896765320
-      Bubbles_3: -433339740
-      Bubbles_0: -821199111
+      Run_2: 641044880
+      Run_1: -733334448
+      Run_0: -55803477
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
