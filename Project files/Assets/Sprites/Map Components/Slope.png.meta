@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40b3b08ce5c566b4abd7fd9ec7c17831
+guid: df0df0b310656064aaf79f758f87db6b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,76 +116,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Slope_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.3745674, y: 0}
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -16, y: -16}
-        - {x: -16, y: 2}
-        - {x: 8, y: 2}
-        - {x: 8, y: -16}
+      - - {x: -6, y: -8}
+        - {x: -8, y: -8}
+        - {x: -8, y: -6}
+        - {x: 6, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 6}
       tessellationDetail: 0
       bones: []
-      spriteID: 331962dff3f013947bd72c941ed3ed84
-      internalID: -1827013166
+      spriteID: 2d8321ebcb85e684e9d097fd30dc0c8d
+      internalID: 1162793347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Slope_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.3745674, y: 0}
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -16, y: -16}
-        - {x: -16, y: 4}
-        - {x: 8, y: 4}
-        - {x: 8, y: -16}
+      - - {x: 6, y: -8}
+        - {x: -8, y: 6}
+        - {x: -8, y: 8}
+        - {x: -6, y: 8}
+        - {x: 8, y: -6}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: e6169d4de3e567a4fa5f2cd6d9305fde
-      internalID: 414161894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.3745674, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -16, y: -16}
-        - {x: -16, y: 7}
-        - {x: 8, y: 7}
-        - {x: 8, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3806a32c9eb7dd64fad80464a27aca3a
-      internalID: 349441455
+      spriteID: e77e8408ace5b6a4d9feec2c1d0d8ca2
+      internalID: 1673356540
       vertices: []
       indices: 
       edges: []
@@ -201,9 +180,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_1: 414161894
-      Jump_2: 349441455
-      Jump_0: -1827013166
+      Slope_0: 1162793347
+      Slope_1: 1673356540
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

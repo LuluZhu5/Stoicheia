@@ -16,10 +16,11 @@ public class PlayerController : MonoBehaviour
     //}
     
     private Rigidbody2D rb;
+    private BoxCollider2D coll;
 
     [Header("Environment")]
-    public float footOffset;
-    public float groundDistance;
+    public float GroundCheckDistance;
+    public float CeilingCheckDistance;
     public LayerMask groundLayer;
 
     [Header("Movement")]
@@ -30,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public float jumpTime;
     public float doubleJumpForce;
     public float doubleJumpTime;
+    public float crouchJumpForce;
+    public float crouchJumpTime;
     private float jumpTimeCounter;
 
     public int jumpMaxCount = 2;
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("State")]
     public bool isGrounded;
+    public bool isCeiling;
     public bool isJumping;
     public bool isLooking;
     public bool isCrouching;
@@ -62,6 +66,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
 }
 
     // Update is called once per frame
@@ -96,9 +101,13 @@ public class PlayerController : MonoBehaviour
 
     void PhysicsCheck()
     {
-        RaycastHit2D leftCheck = Raycast(new Vector2(-footOffset, 0f), Vector2.down, groundDistance, groundLayer);
-        RaycastHit2D rightCheck = Raycast(new Vector2(footOffset, 0f), Vector2.down, groundDistance, groundLayer);
-        isGrounded = leftCheck || rightCheck;
+        RaycastHit2D leftGroundCheck = Raycast(new Vector2(-coll.size.x / 2, 0f), Vector2.down, GroundCheckDistance, groundLayer);
+        RaycastHit2D rightGroundCheck = Raycast(new Vector2(coll.size.x / 2, 0f), Vector2.down, GroundCheckDistance, groundLayer);
+        isGrounded = leftGroundCheck || rightGroundCheck;
+
+        RaycastHit2D leftCeilingCheck = Raycast(new Vector2(-coll.size.x / 2, coll.size.y), Vector2.up, CeilingCheckDistance, groundLayer);
+        RaycastHit2D rightCeilingCheck = Raycast(new Vector2(coll.size.x / 2, coll.size.y), Vector2.up, CeilingCheckDistance, groundLayer);
+        isCeiling = leftCeilingCheck || rightCeilingCheck;
     }
 
     void Movement()
@@ -118,6 +127,8 @@ public class PlayerController : MonoBehaviour
 
     void Jump ()
     {
+        float force = isCrouching ? crouchJumpForce : jumpForce;
+
         if (isGrounded)
         {
             jumpCount = jumpMaxCount - 1;
@@ -126,8 +137,8 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && jumpPressed && jumpCount > 0)
         {
             isJumping = true;
-            jumpTimeCounter = jumpTime;
-            rb.velocity = Vector2.up * jumpForce;
+            jumpTimeCounter = isCrouching ? crouchJumpTime : jumpTime;
+            rb.velocity = Vector2.up * force;
             --jumpCount;
             jumpPressed = false;
         }
@@ -136,7 +147,7 @@ public class PlayerController : MonoBehaviour
         {
             if (jumpTimeCounter > 0)
             {
-                rb.velocity = Vector2.up * jumpForce;
+                rb.velocity = Vector2.up * force;
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
@@ -153,7 +164,7 @@ public class PlayerController : MonoBehaviour
 
     void DoubleJump()
     {
-        if (!isGrounded && jumpPressed && !isJumping && jumpCount > 0)
+        if (!isGrounded && jumpPressed && !isJumping && !isCrouching && jumpCount > 0)
         {
             isJumping = true;
             jumpTimeCounter = doubleJumpTime;
@@ -165,11 +176,11 @@ public class PlayerController : MonoBehaviour
 
     void JumpAdjustment()
     {
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y < -0.1f)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (highFallMutiplier - 1) * Time.deltaTime;
         }
-        else if (rb.velocity.y > 0 && !jumpHeld)
+        else if (rb.velocity.y > 0.1f && !jumpHeld)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowFallMutiplier - 1) * Time.deltaTime;
         }
@@ -183,7 +194,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (isGrounded && verticalInput == 0)
         {
-            isCrouching = false;
+            isCrouching = isCeiling;
         }
     }
 

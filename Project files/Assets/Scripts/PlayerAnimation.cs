@@ -22,18 +22,18 @@ public class PlayerAnimation : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         xVelocityID = Animator.StringToHash("horizontalVelocity");
+        yVelocityID = Animator.StringToHash("verticalVelocity");
         groundID = Animator.StringToHash("isGrounded");
         crouchID = Animator.StringToHash("isCrouching");
         jumpID = Animator.StringToHash("isJumping");
         yInputID = Animator.StringToHash("verticalInput");
-        yVelocityID = Animator.StringToHash("verticalVelocity");
     }
 
     private void Update()
     {
         anim.SetBool(crouchID, controller.isCrouching);
         anim.SetBool(jumpID, controller.isJumping);
-        anim.SetFloat(yInputID, -Input.GetAxis("Vertical"));
+        anim.SetFloat(yInputID, controller.isCeiling ? 1 : -Input.GetAxis("Vertical"));
     }
 
     private void FixedUpdate()
