@@ -7,7 +7,7 @@ Time: [Name] [Type]
 
 Name: [Zac](Zachary Fan), [Lulu](Ziming Zhu), [Kyle](Xinkai Shi), [All](all)
 Time: yyyy/mm/dd
-Type: [Bug] [Debug] [Code optimization] [Add Codes] [Add Features] [Add Art Resources] [Learn] [Other]
+Type: [Bug] [Debug] [Code optimization] [Add Codes] [Add Features] [Add Art Resources] [Learn] [Idea] [Other]
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 2022/04/16: [All] [Other]
@@ -57,3 +57,8 @@ Note: Change the log on 04/30
 Description: Use ruler tile to draw the ground. Complete crouch-related codes. Add some map components resources.
 Details: Add Ceiling Check and adjust the jump and the animation when crouching. Disable the double jump and decrease the jump force when crouching.
          Add light, boards, water and many other art resources. 
+
+2022/05/09：[Zachary Fan] [Idea]
+Description: Use 2D Blend tree to adjust the player animation.
+Details: Let player's animation change more smoothly.
+Note: need some extra art resources.
