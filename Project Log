@@ -66,3 +66,6 @@ Note: need some extra art resources.
 2022/05/09: [Kyle Shi] [bug]
 Description: Player stop unexpectedly when moving up stairs
 Details: When player move up stairs it will stop when the bottom left of player collides with the top right corner of a ground
+
+2022/05/09: [Zachary Fan] [Bug]
+Description: Wrong animations when the player go down the slope.
