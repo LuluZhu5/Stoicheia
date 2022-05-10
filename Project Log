@@ -63,5 +63,6 @@ Description: Use 2D Blend tree to adjust the player animation.
 Details: Let player's animation change more smoothly.
 Note: need some extra art resources.
 
-2022/05/09: [Zachary Fan] [Bug]
-Description: Wrong animation when player go down the slope.
+2022/05/09: [Kyle Shi] [bug]
+Description: Player stop unexpectedly when moving up stairs
+Details: When player move up stairs it will stop when the bottom left of player collides with the top right corner of a ground
