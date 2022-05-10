@@ -52,3 +52,8 @@ Description: Complete jump and fall animation. Debug Jump() in PlayerController.
 Details: Use sub-state to implement hit ground animation. Fix the bug: holding the jump button will cause continuous jump animation when landed. 
          (Change the condition from jumpReleased to !jumpHeld)
 Note: Change the log on 04/30
+
+2022/05/07: [Zachary Fan] [Add features] [Add Codes] [Add Art Resources]
+Description: Use ruler tile to draw the ground. Complete crouch-related codes. Add some map components resources.
+Details: Add Ceiling Check and adjust the jump and the animation when crouching. Disable the double jump and decrease the jump force when crouching.
+         Add light, boards, water and many other art resources. 
