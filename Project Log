@@ -62,3 +62,6 @@ Details: Add Ceiling Check and adjust the jump and the animation when crouching.
 Description: Use 2D Blend tree to adjust the player animation.
 Details: Let player's animation change more smoothly.
 Note: need some extra art resources.
+
+2022/05/09: [Zachary Fan] [Bug]
+Description: Wrong animation when player go down the slope.
