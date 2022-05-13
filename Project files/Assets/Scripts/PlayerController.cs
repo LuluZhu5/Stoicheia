@@ -235,4 +235,9 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(pos + offset, rayDirection * length, color);
         return hit;
     }
+
+    void HitGround()
+    {
+        CinemachineShake.Instance.ShakeCamera();
+    }
 }

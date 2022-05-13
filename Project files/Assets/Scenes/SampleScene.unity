@@ -628,7 +628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5213885, y: -5.4655533, z: -9.891981}
+  m_LocalPosition: {x: 4.524963, y: -4.7323856, z: -9.891981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 1
+    m_Style: 6
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -680,6 +680,7 @@ GameObject:
   - component: {fileID: 768101024}
   - component: {fileID: 768101023}
   - component: {fileID: 768101025}
+  - component: {fileID: 768101026}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -705,7 +706,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 471630155}
   m_Follow: {fileID: 471630155}
   m_Lens:
     FieldOfView: 40
@@ -758,6 +759,21 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1960987373}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &768101026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768101022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25eeb9ef8c81e742840dce2ad97a0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 5
+  frequency: 2
+  time: 0.2
 --- !u!1 &1032589217
 GameObject:
   m_ObjectHideFlags: 0
@@ -4517,6 +4533,7 @@ GameObject:
   - component: {fileID: 1958406700}
   - component: {fileID: 1958406701}
   - component: {fileID: 1958406702}
+  - component: {fileID: 1958406703}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -4594,6 +4611,23 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &1958406703
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958406699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: e9ce97b7a206dc64d90931ea044e0c72, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1960987371
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,11 +4685,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 32.77071, y: 7.0261497}
-      - {x: -12.2678385, y: 7.136977}
-      - {x: -12.214416, y: -12.850716}
-      - {x: 4.248521, y: -12.850715}
-      - {x: 32.920033, y: -12.664107}
+    - - {x: 32.50349, y: 6.8480053}
+      - {x: -11.867011, y: 7.047904}
+      - {x: -11.775971, y: -12.036465}
+      - {x: 32.44008, y: -12.093595}
 --- !u!1 &1968077427
 GameObject:
   m_ObjectHideFlags: 0
