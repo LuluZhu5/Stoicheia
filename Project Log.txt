@@ -70,6 +70,9 @@ Details: When player move up stairs it will stop when the bottom left of player 
 2022/05/09: [Zachary Fan] [Bug]
 Description: Wrong animations when the player go down the slope.
 
+2022/05/09: [Zachary Fan] [Debug]
+Description: Fix the animation on the slope
+
 202/05/13: [Kyle Shi] [Add features]
 Description: Add Hitgorund() which shakes the screen when player fall
 Detail: when player fall to the ground and become idle, there will be a screen shake
