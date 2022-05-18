@@ -5,7 +5,7 @@ Time: [Name] [Type]
 (Development) Details:
 (Additional) Note:
 
-Name: [Zac](Zachary Fan), [Lulu](Ziming Zhu), [Kyle](Xinkai Shi), [All](all)
+Name: [Zac](Zachary Fan), [Harry](Ziming Zhu), [Kyle](Xinkai Shi), [All](all)
 Time: yyyy/mm/dd
 Type: [Bug] [Debug] [Code optimization] [Add Codes] [Add Features] [Add Art Resources] [Learn] [Idea] [Other]
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -74,3 +74,12 @@ Description: Wrong animations when the player go down the slope.
 Description: Add Hitgorund() which shakes the screen when player fall
 Detail: when player fall to the ground and become idle, there will be a screen shake
 Todo: Add activate conditions so that the shake only happens when player fall speed exceed a certain amount
+
+2022/05/18: [Ziming Zhu] [Add features]
+Description: Add Light function to the game and add global light.
+Detail: Add a light source that can light up the background as well as the player.
+	Add global light that control the brightness of the game scenes.
+	Upgrade scene to 2D Render.
+	Add 2D light Render pipeline.
+Note: Need to upgrade the light idle animation and store the light source to prefab.
+
