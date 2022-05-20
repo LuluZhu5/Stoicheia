@@ -86,3 +86,7 @@ Detail: Add a light source that can light up the background as well as the playe
 	Add 2D light Render pipeline.
 Note: Need to upgrade the light idle animation and store the light source to prefab.
 
+2022/05/20: [Zachary Fan] [Add features]
+Description: Complete button selection on Main Menu and add a background
+Detail: Complete selection by both mouse and keyboard
+Note: Adjust the shape of the light sprite
