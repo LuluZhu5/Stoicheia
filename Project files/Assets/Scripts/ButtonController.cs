@@ -10,8 +10,6 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(EventSystem.current.currentSelectedGameObject);
-        Debug.Log(EventSystem.)
         if (EventSystem.current.currentSelectedGameObject == null)
         {
             EventSystem.current.SetSelectedGameObject(selectedButton);
@@ -24,6 +22,7 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
+        Debug.Log(eventData.pointerEnter.transform.parent.gameObject);
+        EventSystem.current.SetSelectedGameObject(eventData.pointerEnter.transform.parent.gameObject);
     }
 }
