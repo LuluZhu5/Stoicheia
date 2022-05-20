@@ -5,8 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Playgame()
+    public void StartGame()
     {
         SceneManager.LoadScene("Scene 1");
+    }
+
+    public void Setting()
+    {
+        SceneManager.LoadScene("Setting");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
