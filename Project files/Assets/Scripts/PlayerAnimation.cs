@@ -14,6 +14,9 @@ public class PlayerAnimation : MonoBehaviour
     int jumpID;
     int yInputID;
     int yVelocityID;
+    int hitGroundID;
+
+    public float hitGroundSpeed;
 
     private void Awake()
     {
@@ -27,6 +30,7 @@ public class PlayerAnimation : MonoBehaviour
         crouchID = Animator.StringToHash("isCrouching");
         jumpID = Animator.StringToHash("isJumping");
         yInputID = Animator.StringToHash("verticalInput");
+        hitGroundID = Animator.StringToHash("isHitGround");
     }
 
     private void Update()
@@ -38,8 +42,24 @@ public class PlayerAnimation : MonoBehaviour
 
     private void FixedUpdate()
     {
+        IsHitGround();
+
         anim.SetBool(groundID, controller.isGrounded);
         anim.SetFloat(xVelocityID, Mathf.Abs(rb.velocity.x));
         anim.SetFloat(yVelocityID, rb.velocity.y);
+    }
+
+    private void IsHitGround()
+    {
+        if (-rb.velocity.y > hitGroundSpeed)
+        {
+            anim.SetBool(hitGroundID, true);
+        }
+    }
+
+    void HitGround()
+    {
+        CinemachineShake.Instance.ShakeCamera();
+        anim.SetBool(hitGroundID, false);
     }
 }

@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
     private bool jumpPressed;
     private bool jumpHeld;
 
+    //
+    
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -236,8 +239,5 @@ public class PlayerController : MonoBehaviour
         return hit;
     }
 
-    void HitGround()
-    {
-        CinemachineShake.Instance.ShakeCamera();
-    }
+    
 }
